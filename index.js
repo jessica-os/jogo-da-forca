@@ -1,13 +1,12 @@
-const questionElement = document.getElementById('question');
-const optionsElement = document.getElementById('options');
-// const statusElement = document.getElementById('status');
+const questionElement = document.querySelector('.question');
+const optionsElement = document.querySelector('.options');
 const statusCorrect = document.querySelector(".status-correct");
 const statusWrong = document.querySelector(".status-wrong");
 const statusLost = document.querySelector(".status-lost");
 const statusCongrats = document.querySelector(".status-congrats");
 
 const hangmanImages = document.querySelectorAll('.error-img');
-const nextQuestionButton = document.getElementById('next-question');
+const nextQuestionButton = document.querySelector('.next-question');
 
 let currentQuestionIndex = 0;
 let attemptsLeft = 6;
