@@ -8,8 +8,9 @@ const statusCongrats = document.querySelector(".status-congrats");
 const hangmanImages = document.querySelectorAll('.error-img');
 const nextQuestionButton = document.querySelector('.next-question');
 const palmasImages = document.querySelectorAll('.palmas');
-const cry = document.querySelector(".cry")
-const line=document.querySelector(".line")
+const cry = document.querySelector(".cry");
+const congrats = document.querySelector(".comemoracao");
+const line = document.querySelector(".line");
 
 let currentQuestionIndex = 0;
 let attemptsLeft = 6;
@@ -116,7 +117,7 @@ const questions = [
         answer: "AWS Direct Connect"
     },
     {
-        question: "Uma empresa precisa de uma conexão consistente e dedicada entre os recursos da AWS e um sistema local.Qual serviço da AWS pode atender a esse requisito?",
+        question: "De acordo com o modo de responsabilidade compartilhada, por quais tarefas de segurança e conformidade a AWS é responsável?",
         options: ["Atualizando sistemas operacionais", "Atualizando o firmware do host Amazon EC2", "Concedendo permissões a usuários e serviços", "Criptografando dados em repouso"],
         answer: "Atualizando o firmware do host Amazon EC2"
     },
@@ -131,14 +132,14 @@ const questions = [
         answer: "Projete para o fracasso."
     },
     {
-        question: "Qual princípio de design de arquitetura de nuvem é suportado pela implantação de cargas de trabalho em várias Zonas de Disponibilidade?",
-        options: ["Automatize a infraestrutura.", "Habilitar elasticidade.", "Projete para o fracasso.", "Design para agilidade."],
-        answer: "Projete para o fracasso."
+        question: "Qual serviço da AWS é um serviço de controle de origem totalmente gerenciado que hospeda repositórios seguros baseados em Git?",
+        options: ["AWS CodeBuild", "AWS CodeCommit", "implementação do código AWS", "AWS CodePipeline"],
+        answer: "AWS CodeCommit"
     },
     {
         question: "Uma empresa precisa usar software de terceiros para sua carga de trabalho na AWS.Existe algum recurso ou serviço da AWS que a empresa pode usar para comprar o software?",
         options: ["AWS License Manager", "AWS Resource Access Manager", "AWS Managed Services", "AWS Marketplace"],
-        answer: "Projete para o fracasso."
+        answer: "AWS Marketplace"
     },
     {
         question: "Qual serviço de armazenamento híbrido da AWS permite que os aplicativos locais de um usuário usem perfeitamente o armazenamento em nuvem da AWS?",
@@ -174,12 +175,21 @@ function loadQuestion() {
         nextQuestionButton.style.display = 'none'; // Oculta o botão "Próxima Questão"
         palmasImages.forEach(img => img.style.display = 'none');
 
+
     } else {
-        statusCorrect.style.display = 'block';
+        
         optionsElement.innerHTML = '';
         nextQuestionButton.style.display = 'none';
+        questionElement.style.display = 'none';
+        congrats.style.display = "block"
+        hangmanImages[6 - attemptsLeft].style.display = 'none';
+        statusCongrats.style.display = 'block';
 
     }
+}
+if (currentQuestionIndex === questions.length) {
+    nextQuestionButton.style.display = 'none';
+
 }
 
 // Função para lidar com a resposta do usuário
@@ -211,7 +221,10 @@ function handleAnswer(selectedOption) {
             optionsElement.innerHTML = '';
             nextQuestionButton.style.display = 'none';
             cry.style.display = "block"
-            line.style.display="block"
+            line.style.display = "block"
+            document.getElementById('attempts-left').textContent = "";
+            statusWrong.style.display="none";
+
 
         }
     }
