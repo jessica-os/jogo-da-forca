@@ -21,7 +21,26 @@
         <div id="options"></div>
       </section>
       <section class="hangman">
-       <div id="status"></div>
+        <button id="next-question">Próxima Questão</button>
+        <div id="status">
+          <p clas="status-correct" class="status-message status-correct">
+            Resposta correta!
+          </p>
+          <p class="status-wrong" class="status-message status-wrong">
+            Resposta errada!<br />
+            Tentativas restantes: <span id="attempts-left">6</span>
+          </p>
+          <p
+            aria-colspan="status-congrats"
+            class="status-message status-congrats"
+          >
+            Parabéns!<br />
+            Você completou todas as perguntas.
+          </p>
+          <p class="status-lost" class="status-message status-lost">
+            Você perdeu!
+          </p>
+        </div>
         <div id="hangman-container">
           <img
             class="error-img"
@@ -66,11 +85,8 @@
             alt=""
           />
         </div>
-       
       </section>
-      
     </div>
-    <button id="next-question">Próxima Questão</button>
 
     <script src="index.js"></script>
   </body>
