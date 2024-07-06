@@ -1,93 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,600;0,700;1,400&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <title>Jogo da Forca sobre AWS</title>
-  </head>
-  <body>
-    <h1>Jogo da Forca <br />AWS</h1>
-    <div class="container">
-      <section class="questions">
-        <div class="question"></div>
-        <div class="options"></div>
-      </section>
-      <section class="hangman">
-        <button class="next-question">Próxima Questão</button>
-        <div class="status">
-          <p clas="status-correct" class="status-message status-correct">
-            Resposta correta!
-          </p>
-          <p class="status-wrong" class="status-message status-wrong">
-            Resposta errada!<br />
-            Tentativas restantes: <span id="attempts-left">6</span>
-          </p>
-          <p
-            aria-colspan="status-congrats"
-            class="status-message status-congrats"
-          >
-            Parabéns!<br />
-            Você completou todas as perguntas.
-          </p>
-          <p class="status-lost" class="status-message status-lost">
-            Você perdeu!
-          </p>
-        </div>
-        <div id="hangman-container">
-          <img
-            class="error-img"
-            id="error-0"
-            src="./midias/hangman-0.svg"
-            alt=""
-          />
-          <img
-            class="error-img"
-            id="error-1"
-            src="./midias/hangman-1.svg"
-            alt=""
-          />
-          <img
-            class="error-img"
-            id="error-2"
-            src="./midias/hangman-2.svg"
-            alt=""
-          />
-          <img
-            class="error-img"
-            id="error-3"
-            src="./midias/hangman-3.svg"
-            alt=""
-          />
-          <img
-            class="error-img"
-            id="error-4"
-            src="./midias/hangman-4.svg"
-            alt=""
-          />
-          <img
-            class="error-img"
-            id="error-5"
-            src="./midias/hangman-5.svg"
-            alt=""
-          />
-          <img
-            class="error-img"
-            id="error-6"
-            src="./midias/hangman-6.svg"
-            alt=""
-          />
-        </div>
-      </section>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,600;0,700;1,400&family=Roboto&display=swap" rel="stylesheet" />
+  <title>Jogo da Forca sobre AWS</title>
+</head>
+<body>
+  <h1>Jogo da Forca <br />AWS</h1>
+  <div class="container">
+    <section class="questions">
+     <img class="cry" src="./midias/cry.gif" alt="" style="display: none;"  >
+      <div class="question"></div>
+      <div class="options"></div>
+    </section>
+    <section class="hangman">
+      <button class="next-question">Próxima Questão</button>
+      <div class="status">
+      <img class="palmas" src="./midias/palmas.gif" alt="" style="display: none;" />
+        <img class="palmas" src="./midias/palmas2.gif" alt="" style="display: none;" />
+        <img class="palmas" src="./midias/yessss.gif" alt="" style="display: none;" />
+        <p class="status-message status-correct">Resposta correta!</p>
+        <p class="status-message status-wrong">Resposta errada!<br />Tentativas restantes: <span id="attempts-left">6</span></p>
+        <p class="status-message status-congrats">Parabéns!<br />Você completou todas as perguntas.</p>
+        <p class="status-message status-lost">Você perdeu!</p>
+       
+      </div>
+      <div id="hangman-container">
+        <img class="error-img" id="error-0" src="./midias/hangman-0.svg" alt="" />
+        <img class="error-img" id="error-1" src="./midias/hangman-1.svg" alt="" />
+        <img class="error-img" id="error-2" src="./midias/hangman-2.svg" alt="" />
+        <img class="error-img" id="error-3" src="./midias/hangman-3.svg" alt="" />
+        <img class="error-img" id="error-4" src="./midias/hangman-4.svg" alt="" />
+        <img class="error-img" id="error-5" src="./midias/hangman-5.svg" alt="" />
+        <img class="error-img" id="error-6" src="./midias/hangman-6.svg" alt="" />
+        <span class="line">- - - - - - - - - - -</span>
+      </div>
+    </section>
+  </div>
 
-    <script src="index.js"></script>
-  </body>
+  <script src="index.js"></script>
+</body>
 </html>

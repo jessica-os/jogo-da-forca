@@ -7,6 +7,9 @@ const statusCongrats = document.querySelector(".status-congrats");
 
 const hangmanImages = document.querySelectorAll('.error-img');
 const nextQuestionButton = document.querySelector('.next-question');
+const palmasImages = document.querySelectorAll('.palmas');
+const cry = document.querySelector(".cry")
+const line=document.querySelector(".line")
 
 let currentQuestionIndex = 0;
 let attemptsLeft = 6;
@@ -167,12 +170,15 @@ function loadQuestion() {
             button.addEventListener('click', () => handleAnswer(option));
             optionsElement.appendChild(button);
         });
+
         nextQuestionButton.style.display = 'none'; // Oculta o botão "Próxima Questão"
+        palmasImages.forEach(img => img.style.display = 'none');
 
     } else {
         statusCorrect.style.display = 'block';
         optionsElement.innerHTML = '';
         nextQuestionButton.style.display = 'none';
+
     }
 }
 
@@ -188,6 +194,11 @@ function handleAnswer(selectedOption) {
     if (selectedOption === questionData.answer) {
         statusCorrect.style.display = 'block';
         nextQuestionButton.style.display = 'block';
+        // Seleciona aleatoriamente uma imagem de palmas para exibir
+        const randomIndex = Math.floor(Math.random() * palmasImages.length);
+        palmasImages[randomIndex].style.display = 'block';
+
+        nextQuestionButton.style.display = 'block';
     } else {
         attemptsLeft--;
         statusWrong.style.display = 'block';
@@ -199,6 +210,8 @@ function handleAnswer(selectedOption) {
             questionElement.style.display = 'none';
             optionsElement.innerHTML = '';
             nextQuestionButton.style.display = 'none';
+            cry.style.display = "block"
+            line.style.display="block"
 
         }
     }
