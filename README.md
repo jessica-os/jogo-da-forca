@@ -4,10 +4,10 @@ PARA TESTAR, [CLIQUE AQUI!](https://jessica-os.github.io/jogo-da-forca/)
  ## Veja como ficou o projeto:
  
  ## Desktop:
-  <img src="./src/images/video_clima.gif" alt="video do projeto em funcionamento">
+  <img src="./midias/desktop.gif" alt="jogo em funcionamento">
   
   ## Mobile:
-   <img src="./src/images/video_clima_mobile.gif" alt="video do projeto em funcionamento">
+ <img src="./midias/responsivo.gif" alt="responsividade aplicada">
    
   ## Do que se trata esse projeto?
 A idéia deste jogo surgiu após dias intensos de estudo para a certificação AWS CLOUD PRACTITIONER.E, para distrair um pouco mas sem perder o foco<br>
