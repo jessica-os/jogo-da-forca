@@ -10,13 +10,14 @@ PARA TESTAR, [CLIQUE AQUI!](https://jessica-os.github.io/jogo-da-forca/)
  <img src="./midias/responsivo.gif" alt="responsividade aplicada">
    
   ## Do que se trata esse projeto?
-A idéia deste jogo surgiu após dias intensos de estudo para a certificação AWS CLOUD PRACTITIONER.E, para distrair um pouco mas sem perder o foco<br>
-nos estudos, resolvi criar um jogo onde se pratica os temas que caem na prova da certificação, mas de um jeito mais divertido. E de quebra, pude <br>
-voltar apraticar HTML, CSS e JAVASCRIPT.
+A idéia deste jogo surgiu após dias intensos de estudo para a certificação AWS CLOUD PRACTITIONER.<br>
+ E, para distrair um pouco mas sem perder o foco nos estudos, resolvi criar um jogo onde se pratica os temas que caem na prova da certificação, 
+ mas de um jeito mais divertido. E de quebra, pude voltar a praticar HTML, CSS e JAVASCRIPT.
 
 ## Quais interações são realizadas?
 - O usuário deve escolher uma das alternativas para a resposta da pergunta em questão.
 - Após o acerto da questão, é possível passar para a próxima clicando em um botão.
+- Se errar, o bonequinho da forca vai se desenhando e se completar o corpo inteiro, o jogo é perdido.
   
 ## Habilidades desenvolvidas:
 - Uso de flexbox para ajustes dos elementos na tela.
