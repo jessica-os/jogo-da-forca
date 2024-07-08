@@ -12,11 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,600;0,700;1,400&family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="shortcut icon"
-      href="./midias/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./midias/favicon.ico" type="image/x-icon" />
     <title>Jogo da Forca sobre AWS</title>
   </head>
   <body>
@@ -28,15 +24,8 @@
     <div class="container">
       <section class="questions">
         <img class="cry" src="./midias/cry.gif" alt="" style="display: none" />
-        <p class="status-message status-congrats" style="display: none">
-          Parabéns!<br />Você completou todas as perguntas!!!🎉
-        </p>
-        <img
-          class="comemoracao"
-          src="./midias/comemoração.gif"
-          alt=""
-          style="display: none"
-        />
+        <img class="champ" src="./midias/champ.gif" alt="" style="display: none" />
+
         <div class="question"></div>
         <div class="options"></div>
       </section>
@@ -65,9 +54,6 @@
             Resposta errada!<br />Tentativas restantes:
             <span id="attempts-left">6</span>
           </p>
-          <!-- <p class="status-message status-congrats">
-            Parabéns!<br />Você completou todas as perguntas.
-          </p> -->
           <p class="status-message status-lost">Você perdeu!</p>
         </div>
         <div id="hangman-container">
@@ -116,6 +102,18 @@
           <span class="line">- - - - - - - - - - -</span>
         </div>
       </section>
+      <div class="vitoria">
+        
+        <p class="status-message status-congrats" style="display: none">
+          PARABÉNS!<br />Você completou todas as perguntas!!!🎉
+        </p>
+        <img
+          class="comemoracao"
+          src="./midias/comemoração.gif"
+          alt=""
+          style="display: none"
+        />
+      </div>
     </div>
 
     <script src="index.js"></script>

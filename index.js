@@ -5,12 +5,14 @@ const statusWrong = document.querySelector(".status-wrong");
 const statusLost = document.querySelector(".status-lost");
 const statusCongrats = document.querySelector(".status-congrats");
 
+const hangman= document.querySelector('.hangman');
 const hangmanImages = document.querySelectorAll('.error-img');
 const nextQuestionButton = document.querySelector('.next-question');
 const palmasImages = document.querySelectorAll('.palmas');
 const cry = document.querySelector(".cry");
 const congrats = document.querySelector(".comemoracao");
 const line = document.querySelector(".line");
+const champ = document.querySelector(".champ");
 
 let currentQuestionIndex = 0;
 let attemptsLeft = 6;
@@ -153,12 +155,8 @@ const questions = [
     },
 ];
 
-
-
-
 // Função para carregar a pergunta atual
 function loadQuestion() {
-
     if (currentQuestionIndex < questions.length) {
         const questionData = questions[currentQuestionIndex];
 
@@ -174,40 +172,37 @@ function loadQuestion() {
 
         nextQuestionButton.style.display = 'none'; // Oculta o botão "Próxima Questão"
         palmasImages.forEach(img => img.style.display = 'none');
-
-
     } else {
-        
-        optionsElement.innerHTML = '';
-        nextQuestionButton.style.display = 'none';
-        questionElement.style.display = 'none';
-        congrats.style.display = "block"
-        hangmanImages[6 - attemptsLeft].style.display = 'none';
-        statusCongrats.style.display = 'block';
-
+        // Mostra a mensagem de parabéns
+        congrats.style.display = "block";
+        statusCongrats.style.display = "block";
+        line.style.display = "none";
+        questionElement.style.display = "none";
+        optionsElement.style.display = "none";
+        nextQuestionButton.style.display = "none";
+        hangmanImages.forEach(img => img.style.display = 'none');
+        champ.style.display = "block"
+        palmasImages.forEach(img => img.style.display = 'none');
+        hangman.style.display = "none";
     }
-}
-if (currentQuestionIndex === questions.length) {
-    nextQuestionButton.style.display = 'none';
-
 }
 
 // Função para lidar com a resposta do usuário
 function handleAnswer(selectedOption) {
     const questionData = questions[currentQuestionIndex];
-    // Esconde todas as mensagens de status
+
+    // Esconde todas as mensagens de status e imagens de palmas
     statusCorrect.style.display = 'none';
     statusWrong.style.display = 'none';
     statusLost.style.display = 'none';
     statusCongrats.style.display = 'none';
+    palmasImages.forEach(img => img.style.display = 'none');
 
     if (selectedOption === questionData.answer) {
         statusCorrect.style.display = 'block';
-        nextQuestionButton.style.display = 'block';
         // Seleciona aleatoriamente uma imagem de palmas para exibir
         const randomIndex = Math.floor(Math.random() * palmasImages.length);
         palmasImages[randomIndex].style.display = 'block';
-
         nextQuestionButton.style.display = 'block';
     } else {
         attemptsLeft--;
@@ -216,16 +211,14 @@ function handleAnswer(selectedOption) {
         hangmanImages[6 - attemptsLeft].style.display = 'block';
 
         if (attemptsLeft === 0) {
-            statusLost.style.display = 'block'
+            statusLost.style.display = 'block';
             questionElement.style.display = 'none';
             optionsElement.innerHTML = '';
             nextQuestionButton.style.display = 'none';
-            cry.style.display = "block"
-            line.style.display = "block"
+            cry.style.display = "block";
+            line.style.display = "block";
             document.getElementById('attempts-left').textContent = "";
-            statusWrong.style.display="none";
-
-
+            statusWrong.style.display = "none";
         }
     }
 }
@@ -247,7 +240,7 @@ function nextQuestion() {
     statusCorrect.style.display = 'none';
     statusWrong.style.display = 'none';
     statusLost.style.display = 'none';
-    statusCongrats.style.display = 'none';
+    // statusCongrats.style.display = 'none';
 }
 
 // Inicia o jogo quando a página é carregada

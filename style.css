@@ -43,12 +43,11 @@ body {
 }
 
 .question {
-    width: 600px;
+  width: 600px;
   text-align: center;
   font-size: 20px;
   color: #fff;
 }
-
 
 .options {
   margin-top: 20px;
@@ -72,14 +71,19 @@ body {
 .options button:hover {
   background-color: rgb(112, 122, 233);
 }
+.hangman .status {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 #hangman-container {
   position: relative;
   width: 200px;
   height: 200px;
 }
-.status .palmas{
-    width: 70%;
+.status .palmas {
+  width: 60%;
 }
 
 .error-img {
@@ -122,7 +126,10 @@ body {
   display: none;
   position: absolute;
   font-size: 20px;
-  margin-top: -40px;
+  margin-top: -50px;
+  margin-left: 30px;
+  width: 150px;
+  font-size: 15px;
 }
 
 .status-congrats {
@@ -130,12 +137,15 @@ body {
   background-color: #b6cef3;
   font-size: 20px;
   padding: 10px;
-  width: 230px;
+  width: 240px;
+  height: 130px;
   border-radius: 5px;
   animation: blink 1s infinite;
+  
+  
 }
-.questions .comemoracao{
-    width: 80%;
+.questions .comemoracao {
+  width: 80%;
 }
 
 .status-lost {
@@ -169,4 +179,25 @@ body {
   position: absolute;
   margin-top: 110px;
   left: 110px;
+}
+.vitoria {
+  display: flex;
+  justify-content:space-around;
+  gap: 150px;
+  
+
+ 
+  
+}
+.vitoria .champ {
+  width: 50%;
+  height: 50%;
+  margin-top: 150px;
+  border-radius: 5px;
+}
+.vitoria .comemoracao {
+  width: 50%;
+  height: 50%;
+  
+  border-radius: 5px;
 }

@@ -5,6 +5,20 @@
 .questions .question{
     width: 300px;
 }
+
+.container .comemoracao {
+  width: 35%;
+}
+ .container .final{
+    flex-direction: column;
+   align-content: center; 
+ gap: 40px;
+  
+  }
+  .status-congrats{
+    width: 250px;
+  height: 180px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -13,6 +27,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .container .final{
+    flex-direction: column;
   }
 
   .header h1 {
@@ -53,6 +70,12 @@
     width: 100%;
   }
 }
+@media (max-width: 680px){
+.container .comemoracao {
+  width: 55%;
+}
+}
+
 @media (max-width: 415px) {
   .questions .cry {
     width: 70%;
@@ -61,6 +84,13 @@
     width: 300px;
     margin-top: 160px;
 }
+.container .comemoracao {
+  width: 70%;
+}
+  .status-congrats{
+    width: 200px;
+  height: 180px;
+  }
 
   .status {
     margin-top: 100px;
