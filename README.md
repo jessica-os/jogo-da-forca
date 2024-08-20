@@ -1,5 +1,5 @@
 # JOGO DA FORCA - TEMA AWS
-PARA TESTAR, [CLIQUE AQUI!](https://jessica-os.github.io/jogo-da-forca/)
+PARA JOGAR, [CLIQUE AQUI!](https://jessica-os.github.io/jogo-da-forca/)
 
  ## Veja como ficou o projeto:
  
@@ -35,7 +35,7 @@ A idéia deste jogo surgiu após dias intensos de estudo para a certificação A
 
 ## Próximos passos:
 Esta é a primeira versão do jogo, pretendo adicionar mais funcionalidades como:
-- O usuário ter apossibilidade de voltar e avançar as questões.
+- O usuário ter a possibilidade de voltar e avançar as questões.
 - Adicionar explicação referente a resposta.
 
 
